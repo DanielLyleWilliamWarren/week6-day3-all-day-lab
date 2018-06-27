@@ -34,5 +34,10 @@ public class DeckTest {
         assertEquals(52, deck.cardCount());
     }
 
+    @Test
+    public void canDrawSingleCard() {
+        deck.draw();
+        assertEquals(51, deck.cards.size());
+    }
 
 }

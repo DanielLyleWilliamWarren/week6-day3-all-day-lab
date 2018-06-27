@@ -1,5 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
     public ArrayList<Card> cards;
@@ -17,6 +17,7 @@ public class Deck {
         cards.add(card);
     }
 
+
     public void fill() {
         for (SuitType s : SuitType.values()) {
             for (RankType r : RankType.values()) {
@@ -26,15 +27,11 @@ public class Deck {
     }
 
     public Card draw() {
-        Card draw = new Card(cards.get(0).getSuit(),cards.get(0).getRank());
-        this.cards.remove(0);
-        return draw;
+        return this.cards.remove(0);
+    }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
     }
 
 }
-
-
-//    public ArrayList<Card> drawCards(int i) {
-//        ArrayList<Card> drawn = new ArrayList<>(this.cards.subList(0, i));
-//    }
-//}

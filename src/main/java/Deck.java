@@ -17,7 +17,12 @@ public class Deck {
     }
 
     public void fill() {
-        for (SuitType s : SuitType.values())
-        {
+        for (SuitType s : SuitType.values()) {
+            for (RankType r : RankType.values()) {
+                this.addCard(new Card(s, r));
+            }
+        }
     }
+
+
 }

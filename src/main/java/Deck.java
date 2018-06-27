@@ -1,9 +1,10 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Deck {
-    private ArrayList<Card> cards;
+    public ArrayList<Card> cards;
 
-    public Deck(){
+    public Deck() {
         this.cards = new ArrayList<>();
     }
 
@@ -24,5 +25,16 @@ public class Deck {
         }
     }
 
+    public Card draw() {
+        Card draw = new Card(cards.get(0).getSuit(),cards.get(0).getRank());
+        this.cards.remove(0);
+        return draw;
+    }
 
 }
+
+
+//    public ArrayList<Card> drawCards(int i) {
+//        ArrayList<Card> drawn = new ArrayList<>(this.cards.subList(0, i));
+//    }
+//}

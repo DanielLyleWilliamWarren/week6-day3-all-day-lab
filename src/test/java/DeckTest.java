@@ -32,6 +32,7 @@ public class DeckTest {
     public void deckCanBeFilled(){
         deck.fill();
         assertEquals(52, deck.cardCount());
-
     }
+
+
 }
